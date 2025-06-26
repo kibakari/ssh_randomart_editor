@@ -1,5 +1,5 @@
 body {
-    font-family: monospace;
+    font-family: "Consolas", "Courier New", monospace;
     text-align: center;
     margin: 20px;
 }
@@ -18,6 +18,25 @@ td {
     height: 20px;
     border: 1px solid #ccc;
     cursor: pointer;
+}
+
+td.border {
+    cursor: default;
+    background-color: #f9f9f9;
+}
+
+.palette {
+    margin-bottom: 10px;
+}
+
+.palette button {
+    font-family: inherit;
+    margin: 2px;
+    padding: 4px 6px;
+}
+
+.palette button.active {
+    background-color: #ddd;
 }
 
 .controls {
