@@ -5,6 +5,7 @@ const width = drawWidth + 2;
 const height = drawHeight + 2;
 
 let headerInput = null;
+let captionInput = null;
 
 let currentChar = chars[1];
 let isPainting = false;
@@ -86,7 +87,9 @@ function exportArt() {
         });
         art += '\n';
     });
-    document.getElementById('output').textContent = art;
+    const name = captionInput.value.slice(0, 12);
+    const captionLine = name ? `The ${name}'s randomart image is:` : 'The randomart image is:';
+    document.getElementById('output').textContent = `${captionLine}\n${art}`;
 }
 
 function updateHeader() {
@@ -99,6 +102,12 @@ function updateHeader() {
     cells.forEach((td, i) => {
         td.textContent = headerRow[i] || ' ';
     });
+}
+
+function updateCaption() {
+    const name = captionInput.value.slice(0, 12);
+    const captionEl = document.getElementById('caption-display');
+    captionEl.textContent = name ? `The ${name}'s randomart image is:` : 'The randomart image is:';
 }
 
 function createPalette() {
@@ -136,6 +145,11 @@ function loadGallery() {
         const item = document.createElement('div');
         item.className = 'gallery-item';
 
+        const caption = document.createElement('div');
+        caption.className = 'gallery-caption';
+        caption.textContent = `The ${galleryArts[idx].author}'s randomart image is:`;
+        item.appendChild(caption);
+
         const pre = document.createElement('pre');
         pre.className = 'gallery-art';
         pre.textContent = galleryArts[idx].art;
@@ -151,11 +165,14 @@ function loadGallery() {
 }
 
 headerInput = document.getElementById('header-input');
+captionInput = document.getElementById('caption-input');
 document.getElementById('clear').addEventListener('click', clearGrid);
 document.getElementById('export').addEventListener('click', exportArt);
 headerInput.addEventListener('input', updateHeader);
+captionInput.addEventListener('input', updateCaption);
 
 createPalette();
 createGrid();
 updateHeader();
+updateCaption();
 loadGallery();
