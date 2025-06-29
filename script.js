@@ -132,10 +132,21 @@ function loadGallery() {
             idx = Math.floor(Math.random() * galleryArts.length);
         } while (used.has(idx) && used.size < galleryArts.length);
         used.add(idx);
+
+        const item = document.createElement('div');
+        item.className = 'gallery-item';
+
         const pre = document.createElement('pre');
         pre.className = 'gallery-art';
-        pre.textContent = galleryArts[idx];
-        galleryEl.appendChild(pre);
+        pre.textContent = galleryArts[idx].art;
+        item.appendChild(pre);
+
+        const author = document.createElement('div');
+        author.className = 'gallery-author';
+        author.textContent = galleryArts[idx].author;
+        item.appendChild(author);
+
+        galleryEl.appendChild(item);
     }
 }
 

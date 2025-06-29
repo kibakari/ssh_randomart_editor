@@ -1,5 +1,6 @@
 const galleryArts = [
-`+---[RSA 3072]----+
+  {
+    art: `+---[RSA 3072]----+
 |          o..+*..|
 |       o . o.O + |
 |        + +.O X  |
@@ -10,7 +11,10 @@ const galleryArts = [
 |          . o.o  |
 |             ..  |
 +----[SHA256]-----+`,
-`+---[RSA 3072]----+
+    author: 'Alice'
+  },
+  {
+    art: `+---[RSA 3072]----+
 |o.o.o   o        |
 |+o + . . *       |
 |+.o   o +.o.     |
@@ -21,7 +25,10 @@ const galleryArts = [
 |      .o=o....o  |
 |        o+. o+   |
 +----[SHA256]-----+`,
-`+---[RSA 3072]----+
+    author: 'Bob'
+  },
+  {
+    art: `+---[RSA 3072]----+
 | ..oo..          |
 |=o+..o B         |
 |B*. + X *        |
@@ -32,7 +39,10 @@ const galleryArts = [
 |         E       |
 |                 |
 +----[SHA256]-----+`,
-`+---[RSA 3072]----+
+    author: 'Carol'
+  },
+  {
+    art: `+---[RSA 3072]----+
 |=B.o             |
 |BEO o            |
 |*+ @ .           |
@@ -43,7 +53,10 @@ const galleryArts = [
 |  .  . o *       |
 |   ..  .=oo      |
 +----[SHA256]-----+`,
-`+---[RSA 3072]----+
+    author: 'Dave'
+  },
+  {
+    art: `+---[RSA 3072]----+
 |  o o*o .. +     |
 |   +E+oo..+ o    |
 |. o=..o o= +     |
@@ -53,5 +66,7 @@ const galleryArts = [
 |+ .      +       |
 |        .        |
 |                 |
-+----[SHA256]-----+`
++----[SHA256]-----+`,
+    author: 'Eve'
+  }
 ];
