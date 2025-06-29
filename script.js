@@ -118,6 +118,27 @@ function createPalette() {
     }
 }
 
+function loadGallery() {
+    if (typeof galleryArts === 'undefined') {
+        return;
+    }
+
+    const galleryEl = document.getElementById('gallery');
+    const count = Math.min(5, galleryArts.length);
+    const used = new Set();
+    for (let i = 0; i < count; i++) {
+        let idx;
+        do {
+            idx = Math.floor(Math.random() * galleryArts.length);
+        } while (used.has(idx) && used.size < galleryArts.length);
+        used.add(idx);
+        const pre = document.createElement('pre');
+        pre.className = 'gallery-art';
+        pre.textContent = galleryArts[idx];
+        galleryEl.appendChild(pre);
+    }
+}
+
 headerInput = document.getElementById('header-input');
 document.getElementById('clear').addEventListener('click', clearGrid);
 document.getElementById('export').addEventListener('click', exportArt);
@@ -126,3 +147,4 @@ headerInput.addEventListener('input', updateHeader);
 createPalette();
 createGrid();
 updateHeader();
+loadGallery();

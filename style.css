@@ -58,3 +58,28 @@ td.border {
     text-align: left;
     display: inline-block;
 }
+
+#gallery-container {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+#gallery {
+    display: inline-block;
+    animation: scroll 30s linear infinite;
+}
+
+.gallery-art {
+    display: inline-block;
+    margin-right: 40px;
+    white-space: pre;
+    font-family: inherit;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
