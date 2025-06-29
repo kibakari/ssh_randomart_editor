@@ -1,6 +1,6 @@
 const galleryArts = [
   {
-    art: `+---[RSA 　3072]---+
+    art: `+---[RSA  3072]---+
 |          o..+*..|
 |       o . o.O + |
 |        + +.O X  |
