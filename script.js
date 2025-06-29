@@ -104,11 +104,6 @@ function updateHeader() {
     });
 }
 
-function updateCaption() {
-    const name = captionInput.value.slice(0, 12);
-    const captionEl = document.getElementById('caption-display');
-    captionEl.textContent = name ? `The ${name}'s randomart image is:` : 'The randomart image is:';
-}
 
 function createPalette() {
     const palette = document.getElementById('palette');
@@ -147,7 +142,7 @@ function loadGallery() {
 
         const caption = document.createElement('div');
         caption.className = 'gallery-caption';
-        caption.textContent = `The ${galleryArts[idx].author}'s randomart image is:`;
+        caption.textContent = galleryArts[idx].caption || `The ${galleryArts[idx].author}'s randomart image is:`;
         item.appendChild(caption);
 
         const pre = document.createElement('pre');
@@ -169,10 +164,8 @@ captionInput = document.getElementById('caption-input');
 document.getElementById('clear').addEventListener('click', clearGrid);
 document.getElementById('export').addEventListener('click', exportArt);
 headerInput.addEventListener('input', updateHeader);
-captionInput.addEventListener('input', updateCaption);
 
 createPalette();
 createGrid();
 updateHeader();
-updateCaption();
 loadGallery();
