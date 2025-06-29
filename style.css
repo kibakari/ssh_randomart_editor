@@ -71,7 +71,9 @@ td.border {
 #output {
     white-space: pre;
     text-align: center;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
+
 }
 
 #gallery-container {

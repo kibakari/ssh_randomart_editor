@@ -75,3 +75,8 @@ const galleryArts = [
     caption: "The Eve's randomart image is:"
   }
 ];
+
+// Expose to other scripts
+if (typeof window !== 'undefined') {
+  window.galleryArts = galleryArts;
+}
