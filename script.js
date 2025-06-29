@@ -4,12 +4,17 @@ const drawHeight = 9;
 const width = drawWidth + 2;
 const height = drawHeight + 2;
 
+let headerInput = null;
+
 let currentChar = chars[1];
 let isPainting = false;
 
 function createGrid() {
     const container = document.getElementById('grid-container');
     const table = document.createElement('table');
+
+    const headerText = (headerInput && headerInput.value) ? headerInput.value : 'ABCDEFGHI';
+    const headerRow = (`+--[${headerText.padEnd(9, ' ').slice(0, 9)}]----+`).split('');
 
     for (let y = 0; y < height; y++) {
         const tr = document.createElement('tr');
@@ -18,10 +23,13 @@ function createGrid() {
             let editable = false;
             let ch = ' ';
 
-            if ((y === 0 || y === height - 1) && (x === 0 || x === width - 1)) {
+            if (y === 0) {
+                ch = headerRow[x];
+                td.classList.add('border');
+            } else if (y === height - 1 && (x === 0 || x === width - 1)) {
                 ch = '+';
                 td.classList.add('border');
-            } else if (y === 0 || y === height - 1) {
+            } else if (y === height - 1) {
                 ch = '-';
                 td.classList.add('border');
             } else if (x === 0 || x === width - 1) {
@@ -80,6 +88,15 @@ function exportArt() {
     document.getElementById('output').textContent = art;
 }
 
+function updateHeader() {
+    const headerText = headerInput.value.padEnd(9, ' ').slice(0, 9);
+    const headerRow = `+--[${headerText}]----+`;
+    const cells = document.querySelectorAll('#grid-container tr:first-child td');
+    cells.forEach((td, i) => {
+        td.textContent = headerRow[i] || ' ';
+    });
+}
+
 function createPalette() {
     const palette = document.getElementById('palette');
     chars.forEach(ch => {
@@ -97,8 +114,11 @@ function createPalette() {
     }
 }
 
+headerInput = document.getElementById('header-input');
 document.getElementById('clear').addEventListener('click', clearGrid);
 document.getElementById('export').addEventListener('click', exportArt);
+headerInput.addEventListener('input', updateHeader);
 
 createPalette();
 createGrid();
+updateHeader();
