@@ -14,7 +14,7 @@ function createGrid() {
     const table = document.createElement('table');
 
     const headerText = (headerInput && headerInput.value) ? headerInput.value : 'ABCDEFGHI';
-    const headerRow = (`+--[${headerText.padEnd(9, ' ').slice(0, 9)}]----+`).split('');
+    const headerRow = (`+---[${headerText.padEnd(9, ' ').slice(0, 9)}]----+`).split('');
 
     for (let y = 0; y < height; y++) {
         const tr = document.createElement('tr');
@@ -90,7 +90,7 @@ function exportArt() {
 
 function updateHeader() {
     const headerText = headerInput.value.padEnd(9, ' ').slice(0, 9);
-    const headerRow = `+--[${headerText}]----+`;
+    const headerRow = `+---[${headerText}]----+`;
     const cells = document.querySelectorAll('#grid-container tr:first-child td');
     cells.forEach((td, i) => {
         td.textContent = headerRow[i] || ' ';
