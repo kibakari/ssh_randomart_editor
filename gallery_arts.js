@@ -12,10 +12,10 @@ const galleryArts = [
 |             ..  |
 +----[SHA256]-----+`,
     author: 'Alice',
-    caption: "The Alice's randomart image is:"
+    caption: "The Test's randomart image is:"
   },
   {
-    art: `+---[RSA 3072]----+
+    art: `+---[RSA d3072]---+
 |o.o.o   o        |
 |+o + . . *       |
 |+.o   o +.o.     |
@@ -27,7 +27,7 @@ const galleryArts = [
 |        o+. o+   |
 +----[SHA256]-----+`,
     author: 'Bob',
-    caption: "The Bob's randomart image is:"
+    caption: "The Test's randomart image is:"
   },
   {
     art: `+---[RSA 3072]----+
