@@ -72,11 +72,21 @@ td.border {
     animation: scroll 30s linear infinite;
 }
 
-.gallery-art {
+.gallery-item {
     display: inline-block;
     margin-right: 40px;
+    text-align: center;
+}
+
+.gallery-art {
+    display: block;
     white-space: pre;
     font-family: inherit;
+}
+
+.gallery-author {
+    margin-top: 5px;
+    font-size: 0.9em;
 }
 
 @keyframes scroll {
