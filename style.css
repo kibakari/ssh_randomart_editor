@@ -39,6 +39,16 @@ td.border {
     margin: 0 auto 10px;
 }
 
+#caption-input-container {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+#caption-display {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 .palette button {
     font-family: inherit;
     margin: 2px;
@@ -76,6 +86,11 @@ td.border {
     display: inline-block;
     margin-right: 40px;
     text-align: center;
+}
+
+.gallery-caption {
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .gallery-art {
