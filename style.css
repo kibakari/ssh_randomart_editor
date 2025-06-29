@@ -5,8 +5,8 @@ body {
 }
 
 #grid-container {
-    display: inline-block;
-    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto 10px;
 }
 
 table {
@@ -30,8 +30,8 @@ td.border {
 }
 
 #header-container {
-    display: inline-block;
-    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto 10px;
 }
 
 .palette button {
