@@ -1,33 +1,33 @@
 const galleryArts = [
   {
-    art: `+---[RSA  3072]---+
-|          o..+*..|
-|       o . o.O + |
-|        + +.O X  |
-|     . o =oB.B . |
-|      + S.+o= .  |
-|       + +E++.   |
-|         ..=.+   |
-|          . o.o  |
-|             ..  |
-+----[SHA256]-----+`,
-    author: 'Alice',
-    caption: "The Test's randomart image is:"
+    art: `+---[SSHKeyArt]---+
+|                 |
+|    ===  ===  X  |
+|   X    X    X   |
+|  X    X    X    |
+|   %    S  X^^^. |
+|    %    %X    X |
+|%   @%   @    X  |
+| ##X  ##X    X&E |
+|                 |
++-----------------+`,
+    author: 'Kibakari',
+    caption: "The First's randomart image is:"
   },
   {
-    art: `+---[RSA d3072]---+
-|o.o.o   o        |
-|+o + . . *       |
-|+.o   o +.o.     |
-| o + . = ++      |
-|E + . o S  +     |
-|     . =.*. o    |
-|      .+*+.  .   |
-|      .o=o....o  |
-|        o+. o+   |
-+----[SHA256]-----+`,
+    art: `+---[CoffeeBRK]---+
+|            o*OoE|
+|          * oOo  |
+|         OoO  *  |
+|         O       |
+|  %     S    /   |
+|   %========/^^  |
+|    %      /   % |
+|     %    / ^+&  |
+|    @######@     |
++-----------------+`,
     author: 'Bob',
-    caption: "The Test's randomart image is:"
+    caption: "The Good Rest's randomart image is:"
   },
   {
     art: `+---[RSA 3072]----+
