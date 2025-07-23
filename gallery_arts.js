@@ -26,7 +26,7 @@ const galleryArts = [
 |     %    / ^+&  |
 |    @######@     |
 +-----------------+`,
-    author: 'Bob',
+    author: 'Kibakari',
     caption: "The Good Rest's randomart image is:"
   },
   {
@@ -75,7 +75,7 @@ const galleryArts = [
     caption: "The Eve's randomart image is:"
   }
 ];
-
+// Please add another image below　↓↓
 // Expose to other scripts
 if (typeof window !== 'undefined') {
   window.galleryArts = galleryArts;
