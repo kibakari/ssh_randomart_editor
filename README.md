@@ -20,7 +20,7 @@ You can paint whatever you want, ignoring the drunken bishop, Peter's dreamy mov
 Use the text field above the grid to customize the nine character header that appears in the exported randomart.
 
 ssh randomart editorウェブアプリケーションです。
-酔っ払らいのビショップ、Peterの夢心地な動きを無視して、好きな絵を描くことができます。
+酔っ払いのビショップ、Peterの夢心地な動きを無視して、好きな絵を描くことができます。
 グリッドの上にあるテキストフィールドで、エクスポートされるランダムアートの先頭に表示される9文字のヘッダーを編集できます。
 
 ## Running locally
