@@ -29,12 +29,12 @@ Open `index.html` in your favorite web browser. No build step or additional depe
 任意のウェブブラウザで `index.html` を開くだけで動作します。ビルド手順や追加の依存はありません。
 
 ## GitHub Pages
-You can run this environment directly in your browser via GitHub Pages:
+You can run this environment directly in your browser via GitHub Pages:  
 この環境は GitHub Pages からブラウザで直接実行できます:
 ```
 https://kibakari.github.io/ssh_randomart_editor/
 ```
-Open the above URL to try it out.
+Open the above URL to try it out.  
 上記のURLにアクセスしてください。
 
 If you create an especially nice randomart image, copy the exported text into `gallery_arts.js` and please consider opening a pull request so it can be shared with everyone.😀
